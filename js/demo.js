@@ -244,7 +244,7 @@
             [...this.DOM.el.querySelectorAll('.grid__item--slide')].forEach((slide, pos) => this.slides.push(new Slide(slide, this.DOM.titles[pos])));
             // Total number of slides
             this.slidesTotal = this.slides.length;
-            if ( this.slidesTotal < 5 ) return;
+            if ( this.slidesTotal < 6) return;
             // Center slide's position
             this.center = 0;
 
