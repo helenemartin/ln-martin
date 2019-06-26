@@ -79,15 +79,30 @@ body {
   border-radius: 50%;
   opacity: 0.4;
   background: var(--color-link);
-  animation: loaderAnim 0.7s linear infinite alternate forwards;
+  animation: loaderAnim 0.7s infinite alternate;
 }
 
 @keyframes loaderAnim {
-  to {
-    opacity: 1;
-    transform: scale3d(0.5,0.5,1);
+   0% {
+    background: url(../img/spinner1.jpg) no-repeat;
+  }
+ 
+  20% {
+    background: url(../img/spinner2.jpg) no-repeat;
+
+  }
+
+  40% {
+    background: url(../img/spinner3.jpg) no-repeat;
+  }
+
+  60% {
+    background: url(../img/spinner4.jpg) no-repeat;
   }
 }
+
+
+ 
 
 a {
   text-decoration: none;
@@ -258,7 +273,7 @@ main {
 
 .grid--slideshow {
   top: 17rem;
-  transform: rotate(-8deg);
+  transform: rotate(-5deg);
 }
 
 .grid--titles {

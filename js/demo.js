@@ -46,7 +46,7 @@
 
     let mousePos = {x: winsize.width/2, y: winsize.height/2};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
-
+//LOOK HERE
     class Slide {
         constructor(el, title) {
             this.DOM = {el: el};
@@ -70,7 +70,7 @@
                     ease: Quart.easeInOut
                 }, 0)
                 .to(this.DOM.imgWrap, duration*.5, {
-                    scaleX: 1.3,
+                    scaleX: 1,
                     ease: Quart.easeIn
                 }, 0)
                 .to(this.DOM.imgWrap, duration*.5, {
@@ -122,7 +122,7 @@
                 const time = MathUtils.randomNumber(0,100)/500;
                 this.elemsTimeline = new TimelineMax({onComplete: resolve})
                 .staggerTo(this.DOM.titleLetters, 1, {
-                    y: MathUtils.randomNumber(300,600),
+                    y: MathUtils.randomNumber(200,600),
                     opacity: 0,
                     ease: Quart.easeInOut
                 }, 0.04, time)
@@ -264,16 +264,16 @@
 
             let mouseMoveVals = {translation: 0, rotation: -8};
             const render = () => {
-                //if ( !this.isAnimating ) {
+                if ( !this.isAnimating ) {
                     mouseMoveVals.translation = MathUtils.lerp(mouseMoveVals.translation, MathUtils.lineEq(-15, 15, winsize.width, 0, mousePos.x), 0.03);
-                    //mouseMoveVals.rotation = MathUtils.lerp(mouseMoveVals.rotation, MathUtils.lineEq(-8.5, -7.5, winsize.width, 0, mousePos.x), 0.03);
+                    mouseMoveVals.rotation = MathUtils.lerp(mouseMoveVals.rotation, MathUtils.lineEq(-8.5, -7.5, winsize.width, 0, mousePos.x), 0.03);
                     for (let i = 0; i <= this.slidesTotal - 1; ++i) {
                         TweenMax.set(this.slides[i].DOM.img, {x: mouseMoveVals.translation});
                         TweenMax.set(this.DOM.titlesInner, {x: -4*mouseMoveVals.translation});
-                        //TweenMax.set(this.DOM.el, {rotation: mouseMoveVals.rotation});
-                        //TweenMax.set(this.DOM.titlesWrap, {rotation: -2*mouseMoveVals.rotation});
+                        TweenMax.set(this.DOM.el, {rotation: mouseMoveVals.rotation});
+                        TweenMax.set(this.DOM.titlesWrap, {rotation: -2*mouseMoveVals.rotation});
                     }
-                //}
+                }
                 requestAnimationFrame(render);
             }
             requestAnimationFrame(render);
@@ -293,7 +293,7 @@
             const s2 = this.slides[1].DOM.el.getBoundingClientRect();
             this.gap = MathUtils.distance(s1.left + s1.width/2, s2.left + s2.width/2, s1.top + s1.height/2, s2.top + s2.height/2);
         }
-        // Initialize events
+        // Initialize events LOOK HERE
         initEvents() {
             this.clickRightFn = () => this.navigate('right');
             this.DOM.interaction.right.addEventListener('click', this.clickRightFn);
@@ -309,9 +309,9 @@
                     return;
                 }
                 new TimelineMax()
-                .to(this.centerSlide.DOM.imgWrap, 0.7, {
+                .to(this.centerSlide.DOM.imgWrap, 1.7, {
                     ease: Expo.easeOut,
-                    scale: 1.02
+                    scale: 1.05
                 })
                 .to(this.centerSlide.DOM.img, 1.7, {
                     ease: Expo.easeOut,
