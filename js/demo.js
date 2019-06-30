@@ -122,18 +122,9 @@
                 const time = MathUtils.randomNumber(0,100)/500;
                 this.elemsTimeline = new TimelineMax({onComplete: resolve})
                 .staggerTo(this.DOM.titleLetters, 1, {
-                    y: MathUtils.randomNumber(200,600),
+                    y: MathUtils.randomNumber(50,150),
                     opacity: 0,
-                    ease: Quart.easeInOut
-                }, 0.04, time)
-                .staggerTo(this.DOM.titleLetters, 0.5, {
-                    scaleY: 2.2,
-                    ease: Quart.easeIn
-                }, 0.04, time)
-                .staggerTo(this.DOM.titleLetters, 0.5, {
-                    scaleY: 1,
-                    ease: Quart.easeOut
-                }, 0.04, time + 0.5)
+                }, 0.01, time)
                 .to(this.DOM.number, 1, {
                     y: -500,
                     opacity: 0,
