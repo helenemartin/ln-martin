@@ -79,27 +79,9 @@ body {
   border-radius: 50%;
   opacity: 0.4;
   background: var(--color-link);
-  animation: loaderAnim 0.7s infinite alternate;
 }
 
-@keyframes loaderAnim {
-   0% {
-    background: url(../img/spinner1.jpg) no-repeat;
-  }
- 
-  20% {
-    background: url(../img/spinner2.jpg) no-repeat;
 
-  }
-
-  40% {
-    background: url(../img/spinner3.jpg) no-repeat;
-  }
-
-  60% {
-    background: url(../img/spinner4.jpg) no-repeat;
-  }
-}
 
 
  
@@ -186,6 +168,7 @@ main {
   background: var(--color-content-bg);
 }
 
+
 .js .content__item {
   opacity: 0;
   pointer-events: none;
@@ -198,11 +181,13 @@ main {
 }
 
 .content__item-header {
+  
   padding: 2rem 2rem 0;
   position: relative;
 }
 
 .content__item-header-title {
+  z-index: -100;
   font-family: ivymode, sans-serif;
   font-weight: 600;
   font-size: 3rem;
@@ -222,7 +207,7 @@ main {
 
 .content__item-header-meta::before {
   content: '---------';
-  margin: 0 0.5rem 0 0;
+  margin: 0 0.9rem 0 0;
   letter-spacing: -0.15rem;
 }
 
@@ -272,7 +257,7 @@ main {
 }
 
 .grid--slideshow {
-  top: 17rem;
+  top: 5rem;
   transform: rotate(-5deg);
 }
 
@@ -376,11 +361,44 @@ main {
   background-position: 50% 50%;
   position: absolute;
   pointer-events: none;
+  border: 10px dotted black;
+
+}
+/*.animate-images {
+  animation: loaderAnim 0.7s infinite alternate;
+
+}*/
+
+@keyframes loaderAnim {
+
+   0% {
+    background: url(../img/spinner1.jpg) no-repeat;
+  }
+ 
+  20% {
+    background: url(../img/spinner2.jpg) no-repeat;
+
+  }
+
+  40% {
+    background: url(../img/spinner3.jpg) no-repeat;
+  }
+
+  60% {
+    background: url(../img/spinner4.jpg) no-repeat;
+  }
 }
 
 .img--content {
   background-position: 50% 38%;
 }
+
+.img-wrap .img-wrap--content img .animate-images {
+  
+
+}
+
+
 
 .caption {
   text-transform: uppercase;
@@ -473,6 +491,7 @@ main {
     pointer-events: auto;
   }
   .grid {
+   /* height: 150vh;*/
     height: 100vh;
     grid-template-columns: repeat(3, calc((100% - 36vw) / 3));
     grid-column-gap: 18vw;
@@ -497,11 +516,12 @@ main {
   .content {
     top: 0;
     position: absolute;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
   }
   .content__item {
     height: 100vh;
+    /*height: 200vh;*/
     display: grid;
     align-items: center;
     grid-template-columns: 30% 40% 30%;
