@@ -360,33 +360,90 @@ main {
   background-size: cover;
   background-position: 50% 50%;
   position: absolute;
+  position: relative;
   pointer-events: none;
-  border: 10px dotted black;
-
-}
-.animate-images {
-  animation: loaderAnim 0.7s infinite alternate;
+ /* border: 10px dotted black;*/
 
 }
 
-@keyframes loaderAnim {
+.fade {
+  position:relative;
+  height:100%;
+  width:100%;
+  margin:0 auto;
+}
+
+/*first try 2 slides*/
+
+/*.fade img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}*/
+/*.top {
+  position: absolute;
+  
+
+}*/
+/*.bottom{
+  position: absolute;
+  animation: flipimages 8s ease-in-out 8s infinite alternate;
+}
+
+
+@keyframes  flipimages {
 
    0% {
-    background: url(img/potato-a.jpg) no-repeat;
-  }
- 
-  20% {
-    background: url(img/potato4.jpg) no-repeat;
-
+    opacity: 1;
   }
 
-  40% {
-    background: url(img/dress.jpg) no-repeat;
+  100% {
+    opacity: 0;
   }
+}*/
+/*first try 2 slides ends*/
 
-  60% {
-    background: url(img/potato4.jpg) no-repeat;
+.fade .img {
+  position: absolute;
+  animation: flipimages 8s ease-in-out infinite;
+}
+
+@keyframes flipimages {
+   0% {
+    opacity:1;
   }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade .img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+.fade .img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+.fade .img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+.fade .img:nth-of-type(4) {
+  animation-delay: 0s;
+}
+
+
+
 }
 
 .img--content {
