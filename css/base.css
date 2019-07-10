@@ -364,28 +364,28 @@ main {
   border: 10px dotted black;
 
 }
-/*.animate-images {
+.animate-images {
   animation: loaderAnim 0.7s infinite alternate;
 
-}*/
+}
 
 @keyframes loaderAnim {
 
    0% {
-    background: url(../img/spinner1.jpg) no-repeat;
+    background: url(img/potato-a.jpg) no-repeat;
   }
  
   20% {
-    background: url(../img/spinner2.jpg) no-repeat;
+    background: url(img/potato4.jpg) no-repeat;
 
   }
 
   40% {
-    background: url(../img/spinner3.jpg) no-repeat;
+    background: url(img/dress.jpg) no-repeat;
   }
 
   60% {
-    background: url(../img/spinner4.jpg) no-repeat;
+    background: url(img/potato4.jpg) no-repeat;
   }
 }
 
