@@ -328,7 +328,7 @@
 
             this.resizeFn = () => this.calculateGap();
             window.addEventListener('resize', this.resizeFn);
-
+//LOOK HERE
             this.DOM.contentItems.forEach(item => {
                 item.querySelector('.img-wrap--content').addEventListener('click', () => this.closeSlide());
             });

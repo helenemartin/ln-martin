@@ -372,61 +372,58 @@ main {
   
 }
 
-/*
-.fade {
-  position:relative;
-  height:100%;
-  width:100%;
-  margin:0 auto;
-}*/
 
-.fade {
-  position:relative;
-  height: 100%;
-  width: 100%;
+
+.platform {
+  position:absolute;
+  height: 100px;
+  width: 100px;
   margin:0 auto;
-  animation: platforms 150ms infinite alternate;
+  background: url(../img/plat1.jpg) no-repeat;
+  /*animation: platforms 6s infinite alternate;*/
 }
 
 @keyframes platforms {
 
   0% {
-    background: url(img/26.jpg) no-repeat;
+    background: url(../img/plat1.jpg) no-repeat;
+    opacity:1;
   }
   
   20% {
-    background: url(img/30.jpg) no-repeat;
+    background: url(../img/plat2.jpg) no-repeat;
+    opacity:1;
 
   }
 
   30% {
-    background: url(img/31.jpg) no-repeat;
+    background: url(img/plat3.jpg) no-repeat;
   }
 
   30% {
-    background: url(img/32.jpg) no-repeat;
+    background: url(img/plat4.jpg) no-repeat;
   }
  
   40% {
-    background: url(img/33.jpg) no-repeat;
+    background: url(img/plat6.jpg) no-repeat;
   }
   50% {
-    background: url(img/34.jpg) no-repeat;
+    background: url(img/plat7.jpg) no-repeat;
   }
   60% {
-    background: url(img/35.jpg) no-repeat;
+    background: url(img/plat8.jpg) no-repeat;
   }
   70% {
-    background: url(img/36.jpg) no-repeat;
+    background: url(img/plat9.jpg) no-repeat;
   }
   80% {
-    background: url(img/37.jpg) no-repeat;
+    background: url(img/plat10.jpg) no-repeat;
   }
   90% {
-    background: url(img/38.jpg) no-repeat;
+    background: url(img/plat11.jpg) no-repeat;
   }
   100% {
-    background: url(img/30.jpg) no-repeat;
+    background: url(img/plat12.jpg) no-repeat;
   }
 }
 
@@ -441,19 +438,33 @@ main {
 }
 .platform .img {
   position: absolute;
-  animation: platforms 1s ease-in-out alternate infinite; 
+  animation: platforms 350ms linear infinite; 
 }
 @keyframes platforms {
   0% {
     opacity:1;
   }
-  4% {
+  3% {
     opacity:1;
   }
-  5% {
+  4% {
     opacity:0;
   }
-
+  5% {
+    opacity:1;
+  }
+  6% {
+    opacity:0;
+  }
+  96% {
+    opacity:0;
+  }
+  97% {
+    opacity:0;
+  }
+  98% {
+    opacity:0;
+  }
   99% {
     opacity:0;
   }
@@ -518,8 +529,8 @@ main {
 }
 .platform .img:nth-of-type(20) {
   animation-delay: 0s;
-}*/
-
+}
+*/
 
 
 
@@ -544,7 +555,7 @@ main {
 .bottom {
   width: 100%;
   position: absolute;
-  animation: twoimages 8s ease-in-out 8s infinite alternate;
+  animation: twoimages 2s ease-in-out 2s infinite alternate;
 }
 
 
