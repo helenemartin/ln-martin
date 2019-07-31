@@ -413,7 +413,7 @@
     // Preload all the images in the page
     imagesLoaded(document.querySelectorAll('.img'), {background: true}, () => document.body.classList.remove('loading'));
     
-    [...document.querySelectorAll('.frame__mode input[type="radio"]')].forEach(radio => radio.addEventListener('click', () => {
-        document.body.classList[radio.parentNode.classList.contains('frame__mode-item--dark') ? 'add' : 'remove']('dark-mode');
-    }));
+    // [...document.querySelectorAll('.frame__mode input[type="radio"]')].forEach(radio => radio.addEventListener('click', () => {
+    //     document.body.classList[radio.parentNode.classList.contains('frame__mode-item--dark') ? 'add' : 'remove']('dark-mode');
+    // }));
 }

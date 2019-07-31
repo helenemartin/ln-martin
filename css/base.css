@@ -376,11 +376,11 @@ main {
 
 .platform {
   position:absolute;
-  height: 100px;
-  width: 100px;
+  height: 100%;
+  width: 100%;
   margin:0 auto;
   background: url(../img/plat1.jpg) no-repeat;
-  /*animation: platforms 6s infinite alternate;*/
+  animation: platforms 4s infinite;
 }
 
 @keyframes platforms {
@@ -397,33 +397,33 @@ main {
   }
 
   30% {
-    background: url(img/plat3.jpg) no-repeat;
+    background: url(../img/plat3.jpg) no-repeat;
   }
 
   30% {
-    background: url(img/plat4.jpg) no-repeat;
+    background: url(../img/plat4.jpg) no-repeat;
   }
  
   40% {
-    background: url(img/plat6.jpg) no-repeat;
+    background: url(../img/plat6.jpg) no-repeat;
   }
   50% {
-    background: url(img/plat7.jpg) no-repeat;
+    background: url(../img/plat7.jpg) no-repeat;
   }
   60% {
-    background: url(img/plat8.jpg) no-repeat;
+    background: url(../img/plat8.jpg) no-repeat;
   }
   70% {
-    background: url(img/plat9.jpg) no-repeat;
+    background: url(../img/plat9.jpg) no-repeat;
   }
   80% {
-    background: url(img/plat10.jpg) no-repeat;
+    background: url(../img/plat10.jpg) no-repeat;
   }
   90% {
-    background: url(img/plat11.jpg) no-repeat;
+    background: url(../img/plat11.jpg) no-repeat;
   }
   100% {
-    background: url(img/plat12.jpg) no-repeat;
+    background: url(../img/plat12.jpg) no-repeat;
   }
 }
 
@@ -607,6 +607,12 @@ main {
   animation-delay: 0s;
 }
 
+.graph {
+  position: relative;
+  width: 100%;
+  height:100%;
+
+}
 
 
 .img--content {
