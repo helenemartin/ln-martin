@@ -444,6 +444,10 @@ main {
   position: absolute;
   animation: twoimages 2s ease-in-out 2s infinite alternate;
 }
+.footer {
+  width: 100%;
+  height: 100%;
+}
 
 
 @keyframes  twoimages {
