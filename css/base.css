@@ -42,18 +42,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.dark-mode {
-  --color-text: #424242;
-  --color-bg: #101010;
-  --color-link: #bb3a3a;
-  --color-link-hover: #fff;
-  --color-number: #484848;
-  --color-title: #bb3a3a;
-  --color-caption: #484848;
-  --color-content: #dadada;
-  --color-content-title: #bb3a3a;
-  --color-content-meta: #fff;
-}
 
 /* Page Loader */
 .js .loading::before {
@@ -444,9 +432,30 @@ main {
   position: absolute;
   animation: twoimages 2s ease-in-out 2s infinite alternate;
 }
-.footer {
-  width: 100%;
-  height: 100%;
+
+.show{
+  display: visible;
+}
+
+#show_under{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: red;
+}
+#show_over{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: coral;
+    opacity:0.7;
+}
+.show:hover ~ #show_under {
+    display: block;
+}
+
+.show2:hover ~ #show_over{
+    display: block;
 }
 
 
