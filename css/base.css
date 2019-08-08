@@ -202,9 +202,7 @@ main {
   color: var(--color-content-meta);
 }
 
-.dark-mode .content__item-header-meta {
-  mix-blend-mode: difference;
-}
+
 
 .content__item-header-meta::before {
   content: '---------';
@@ -469,23 +467,24 @@ main {
 #show_under{
     /*display: none;*/
 
-    transition: opacity 9s;
+    transition: opacity 10s;
     opacity: 0;
+
     /*width: 100vw;*/
     /*height: 100vh;*/
     /*background: white;*/
 }
 
 .show:hover ~ #show_under {
-    /*display: block;*/
+    display: block;
+    pointer-events:none;
     opacity: 1;
 }
 
-.show2:hover ~ #show_over{
-    display: block;
-}
 
 .paragraph {
+  height: 10vh;
+  padding: 20px;
   color:black;
   font-family: Trebuchet, sans-serif;
   font-weight: 2em;
