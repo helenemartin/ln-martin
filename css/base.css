@@ -109,6 +109,7 @@ main {
   padding: 3rem 5vw 0;
   text-align: center;
   position: relative;
+  pointer-events:none;
 }
 
 .frame__title {
@@ -462,6 +463,7 @@ main {
   position: fixed;
   bottom: 1rem;
   right: 0.5rem;
+
 }
 
 #show_under{
@@ -469,6 +471,7 @@ main {
 
     transition: opacity 10s;
     opacity: 0;
+    /*pointer-events:inherit;*/
 
     /*width: 100vw;*/
     /*height: 100vh;*/
@@ -477,7 +480,6 @@ main {
 
 .show:hover ~ #show_under {
     display: block;
-    pointer-events:none;
     opacity: 1;
 }
 
