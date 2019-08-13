@@ -463,13 +463,14 @@ main {
   position: fixed;
   bottom: 1rem;
   right: 0.5rem;
+  pointer-events:auto;
 
 }
 
 #show_under{
     /*display: none;*/
 
-    transition: opacity 10s;
+    transition: opacity 1s;
     opacity: 0;
     /*pointer-events:inherit;*/
 
@@ -485,8 +486,8 @@ main {
 
 
 .paragraph {
-  height: 50vh;
-  padding: 20px;
+  height: 70vh;
+  padding: 2px;
   color:black;
   font-family: Trebuchet, sans-serif;
   font-weight: 2em;
