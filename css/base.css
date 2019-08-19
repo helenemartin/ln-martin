@@ -90,6 +90,12 @@ a:focus {
   outline: none;
 }
 
+li:hover,
+li:focus {
+  color: var(--color-link-hover);
+  outline: none;
+}
+
 main {
   position: relative;
   min-height: 100vh;
@@ -470,6 +476,8 @@ main {
 
 }
 
+
+
 #show_under{
     transition: opacity 1s;
     opacity: 0;
@@ -477,7 +485,7 @@ main {
 }
 
 .show:hover ~ #show_under {
-
+    color:red;
     display: block;
     opacity: 1;
 
@@ -525,10 +533,8 @@ main {
 .copyrights{
   float:left;
   right:0;
-
+  font-size:0.8em;
 }
-
-
 
 .fade .img {
   position: absolute;
