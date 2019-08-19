@@ -471,23 +471,9 @@ main {
 }
 
 #show_under{
-    /*display: none;*/
-    
-
     transition: opacity 1s;
     opacity: 0;
     z-index: 100;
-
-    /*pointer-events:inherit;*/
-
-    /*width: 100vw;*/
-    /*height: 100vh;*/
-   /* background-color: rgba(255, 255, 255, 0.2);
-    -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);*/
 }
 
 .show:hover ~ #show_under {
@@ -520,6 +506,27 @@ main {
   padding: 2rem;
 }
 
+.footer {
+  list-style:none;
+  cursor:pointer;
+  position:relative;
+}
+
+.footer .li {
+  display:block;
+  padding:20%;
+  position:fixed;
+}
+
+.ln {
+  
+  text-align:center;
+}
+.copyrights{
+  float:left;
+  right:0;
+
+}
 
 
 
