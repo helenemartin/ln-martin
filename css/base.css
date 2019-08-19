@@ -507,12 +507,14 @@ main {
   
 }
 .about-text {
+  background-color: rgba(255, 255, 255, 0.9);
+   -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px) opacity(.9); 
   font-family: Arial;
   position: relative;
   text-align:center;
   /*width: 100px;*/
   float: right;
-  background:white;
   justify-self: end;
   text-align: left;
   padding: 2rem;
