@@ -385,7 +385,15 @@ main {
   
 }
 
+/* VIDEO */
+.lead {
+  object-fit: cover;
+  width: 119vw;
+  margin-left: -112px;
+}
+/* VIDEO ends */
 
+/* ANIMATIONS */
 .platform {
   position:absolute;
   height: 100%;
@@ -466,76 +474,6 @@ main {
 }
 /*first try 2 slides ends*/
 
-.show {
-  /*width:100vh;*/
-  position: fixed;
-  bottom: 1rem;
-  right: 0.5rem;
-  pointer-events:auto;
-
-
-}
-
-
-
-#show_under{
-    transition: opacity 1s;
-    opacity: 0;
-    z-index: 100;
-}
-
-.show:hover ~ #show_under {
-    color:red;
-    display: block;
-    opacity: 1;
-
-}
-
-
-.paragraph {
-  height: 70vh;
-  padding: 2px;
-  color:black;
-  font-family: Trebuchet, sans-serif;
-  font-weight: 2em;
-  
-}
-.about-text {
-  background-color: rgba(255, 255, 255, 0.9);
-   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px) invert(.9); 
-  font-family: Trebuchet, sans-serif;
-  position: relative;
-  text-align:center;
-  /*width: 100px;*/
-  float: right;
-  justify-self: end;
-  text-align: left;
-  padding: 2rem;
-}
-
-.footer {
-  list-style:none;
-  cursor:pointer;
-  position:relative;
-}
-
-.footer .li {
-  display:block;
-  padding:20%;
-  position:fixed;
-}
-
-.ln {
-  
-  text-align:center;
-}
-.copyrights{
-  float:left;
-  right:0;
-  font-size:0.8em;
-}
-
 .fade .img {
   position: absolute;
   animation: flipimages 4s infinite;
@@ -559,6 +497,7 @@ main {
   }
 }
 
+
 .fade .img:nth-of-type(1) {
   animation-delay: 3s;
 }
@@ -572,15 +511,7 @@ main {
   animation-delay: 0s;
 }
 
-
-
-.lead {
-  object-fit: cover;
-  width: 119vw;
-  margin-left: -112px;
-}
-
-
+/* ANIMATIONS END */
 .img--content {
   background-position: 50% 38%;
 }
@@ -645,6 +576,75 @@ main {
   transform: scale(0.5);
   content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='52px' height='52px' viewBox='0 0 52 52' style='enable-background:new 0 0 52 52;' xml:space='preserve'%3E %3Cpath  d='M20.921 26.67L5.791 41.75C5.485 41.743.23 36.488.224 36.18L15.32 21.073.098 5.86 5.74.22l15.19 15.24L36.161.22l5.64 5.64-15.27 15.22 15.097 15.15c-.006.307-5.262 5.562-5.569 5.568L20.921 26.67z'/%3E %3C/svg%3E");
 }
+
+/* About on:hover */
+.show {
+  /*width:100vh;*/
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  pointer-events:auto;
+
+}
+
+
+#show_under{
+    transition: opacity 1s;
+    opacity: 0;
+    z-index: 100;
+}
+
+.show:hover ~ #show_under {
+    opacity: 1;
+}
+
+
+.paragraph {
+  height: 70vh;
+  padding: 2px;
+  color:black;
+  font-family: Trebuchet, sans-serif;
+  font-weight: 2em;
+  
+}
+.about-text {
+  background-color: rgba(255, 255, 255, 0.9);
+   -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); 
+  font-family: Trebuchet, sans-serif;
+  position: relative;
+  text-align:center;
+  /*width: 100px;*/
+  float: right;
+  justify-self: end;
+  text-align: left;
+  padding: 2rem;
+}
+/* About ends */
+
+/* Footer */
+.footer {
+  list-style:none;
+  cursor:pointer;
+  position:relative;
+}
+
+.footer .li {
+  display:block;
+  padding:20%;
+  position:fixed;
+}
+
+.ln {
+  
+  text-align:center;
+}
+.copyrights{
+  float:left;
+  right:0;
+  font-size:0.8em;
+}
+/* Footer ends */
 
 @media screen and (min-width: 53em) {
   body {
